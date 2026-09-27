@@ -1,0 +1,27 @@
+schema: spec-driven
+
+context: |
+  NeedRadar V0.1 is governed by docs/spec/NeedRadar_需求说明书_OpenSpec_v1.0.md.
+  Read AGENTS.md, docs/quality/REQUIREMENTS_INDEX.md, docs/quality/ACCEPTANCE.md,
+  docs/quality/TRACEABILITY.md, docs/quality/DECISIONS.md, and docs/quality/PLAN.md
+  before proposing or applying a Change. Unconfirmed decisions are not requirements.
+
+rules:
+  proposal:
+    - Cover exactly one planned Change or one reviewable slice of it.
+    - Cite Requirement IDs and Acceptance IDs; list explicit non-goals.
+    - Do not resolve OPEN or PROPOSED decisions as if user-confirmed.
+  specs:
+    - Preserve requirement level and include traceability to the Spec Baseline.
+  tasks:
+    - Include tests, migration work for schema changes, and verification evidence.
+    - Do not include work assigned to a future Change.
+
+operations:
+  apply:
+    guidance:
+      - Never claim PASS for verification that was not executed.
+      - Real external integrations require LIVE_INTEGRATION evidence or a NOT_VERIFIED/BLOCKED result.
+  archive:
+    guidance:
+      - Reconcile TRACEABILITY.md and report every remaining FAIL, BLOCKED, NOT_VERIFIED, or UNIMPLEMENTED item.
