@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "receipt_id": "2e8cc99d9f88073c051893023876402885cdf3f1e39e1e1226a06feb4dfa7877",
+  "target_id": "VT-RV-S1-GOVERNANCE-011",
+  "requirement_id": "REQ-GOVERNANCE-011",
+  "acceptance_ids": [
+    "AC-GOVERNANCE-011"
+  ],
+  "verification_stage": "REQUIREMENT_VERIFICATION",
+  "verification_level": "STATIC",
+  "verification_base_head": "691b4336c0a3d9596a8c101ce987c13d6108f996",
+  "target_registry_hash": "fd5e2de4683fe520c2d31aa20ab6ef1e822ea3782e4b558282895632fe865d9e",
+  "target_definition_hash": "c9301f1c9bcd5213c53a53734a8a95794878b8e324f5bf4361aa2b14352bcc4b",
+  "source_fingerprint": "3744bc0526ac47050dba7988ba8e7599fda6647826ab53c8649f1ebfd699c5c0",
+  "collection_argv": [
+    "uv",
+    "run",
+    "pytest",
+    "--collect-only",
+    "-q",
+    "-p",
+    "scripts.quality.pytest_binding_plugin",
+    "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+  ],
+  "collection_exit_code": 0,
+  "collected_nodes": [
+    "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+  ],
+  "collected_bindings": [
+    {
+      "nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+      "requirement_id": "REQ-GOVERNANCE-011",
+      "acceptance_ids": [
+        "AC-GOVERNANCE-011"
+      ]
+    },
+    {
+      "nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": []
+    }
+  ],
+  "exact_executable_argv": [
+    "uv",
+    "run",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-p",
+    "scripts.quality.pytest_binding_plugin",
+    "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+  ],
+  "started_at": "2026-09-29T01:47:50.114233Z",
+  "finished_at": "2026-09-29T01:47:50.569488Z",
+  "executed_at": "2026-09-29T01:47:50.569488Z",
+  "actual_exit_code": 0,
+  "test_results": {
+    "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade": "passed"
+  },
+  "stdout_sha256": "976ea3fe6dfa65b827ec05fc16bf49cec94d3fda3b2d6ad4719708e74a38b32d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "working_directory": "."
+}

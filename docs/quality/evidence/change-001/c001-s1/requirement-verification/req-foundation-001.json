@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-FOUNDATION-001",
+  "acceptance_ids": [
+    "AC-FOUNDATION-001"
+  ],
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "verification_stage": "REQUIREMENT_VERIFICATION",
+  "result": "PASS",
+  "verified_at": "2026-09-29T01:47:56.577106Z",
+  "git_head": "691b4336c0a3d9596a8c101ce987c13d6108f996",
+  "implementation_refs": [
+    "package.json",
+    "compose.yaml",
+    "apps/api/src/needradar/api/app.py",
+    "apps/web/app/dashboard/page.tsx"
+  ],
+  "test_refs": [
+    "apps/api/tests/integration/test_readiness.py",
+    "tests/e2e/foundation.spec.ts",
+    "apps/api/tests/verification/test_s1_targets.py"
+  ],
+  "verification_targets": [
+    "VT-RV-S1-FOUNDATION-001"
+  ],
+  "test_bindings": [
+    {
+      "target_id": "VT-RV-S1-FOUNDATION-001",
+      "test_nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+      "requirement_id": "REQ-FOUNDATION-001",
+      "acceptance_ids": [
+        "AC-FOUNDATION-001"
+      ]
+    },
+    {
+      "target_id": "VT-RV-S1-FOUNDATION-001",
+      "test_nodeid": "apps/api/tests/integration/test_readiness.py::test_health_stays_up_when_database_is_down",
+      "requirement_id": "REQ-FOUNDATION-001",
+      "acceptance_ids": [
+        "AC-FOUNDATION-001"
+      ]
+    },
+    {
+      "target_id": "VT-RV-S1-FOUNDATION-001",
+      "test_nodeid": "apps/api/tests/verification/test_s1_targets.py::test_foundation_scope_remains_s1_only",
+      "requirement_id": "REQ-FOUNDATION-001",
+      "acceptance_ids": [
+        "AC-FOUNDATION-001"
+      ]
+    },
+    {
+      "target_id": "VT-RV-S1-FOUNDATION-001",
+      "test_nodeid": "apps/api/tests/verification/test_s1_targets.py::test_foundation_real_e2e",
+      "requirement_id": "REQ-FOUNDATION-001",
+      "acceptance_ids": [
+        "AC-FOUNDATION-001"
+      ]
+    }
+  ],
+  "execution_receipts": [
+    {
+      "target_id": "VT-RV-S1-FOUNDATION-001",
+      "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-foundation-001.json",
+      "receipt_hash": "27aba7f5d7daeb339fcb213c22cec76280993992febf31adb7552d2cedf9d47a"
+    }
+  ],
+  "artifacts": [
+    "docs/quality/evidence/change-001/c001-s1/final-requirement-reverification-20260929.md",
+    "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-foundation-001.json"
+  ],
+  "source_fingerprint": "e0bc4c38cf9967af45e760333270b7656bc2c0996d5c6d7879813dd475926fa0",
+  "implementation_attestation_ref": "docs/quality/evidence/change-001/c001-s1/implementation/req-foundation-001.json",
+  "implementation_attestation_hash": "185162ecb098e0118773431f2aa376f3b263233d5ab9a289718d60d403b4c41f"
+}

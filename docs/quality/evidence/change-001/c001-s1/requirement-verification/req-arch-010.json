@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-ARCH-010",
+  "acceptance_ids": [],
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "verification_stage": "REQUIREMENT_VERIFICATION",
+  "result": "PASS",
+  "verified_at": "2026-09-29T01:47:49.176345Z",
+  "git_head": "691b4336c0a3d9596a8c101ce987c13d6108f996",
+  "implementation_refs": [
+    "apps/web/package.json",
+    "apps/web/tsconfig.json",
+    "apps/web/tailwind.config.ts",
+    "apps/web/postcss.config.mjs",
+    "apps/web/app/globals.css",
+    "apps/web/app/layout.tsx",
+    "apps/web/app/dashboard/page.tsx",
+    "apps/web/src/components/foundation-status.tsx"
+  ],
+  "test_refs": [
+    "apps/api/tests/verification/test_s1_targets.py"
+  ],
+  "verification_targets": [
+    "VT-RV-S1-ARCH-010"
+  ],
+  "test_bindings": [
+    {
+      "target_id": "VT-RV-S1-ARCH-010",
+      "test_nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+      "requirement_id": "REQ-ARCH-010",
+      "acceptance_ids": []
+    },
+    {
+      "target_id": "VT-RV-S1-ARCH-010",
+      "test_nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture",
+      "requirement_id": "REQ-ARCH-010",
+      "acceptance_ids": []
+    }
+  ],
+  "execution_receipts": [
+    {
+      "target_id": "VT-RV-S1-ARCH-010",
+      "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-010.json",
+      "receipt_hash": "3a4b1650a31648a72a3c552dd70811332adba555f6734b44f414c0a8f5688409"
+    }
+  ],
+  "artifacts": [
+    "docs/quality/evidence/change-001/c001-s1/final-requirement-reverification-20260929.md",
+    "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-010.json"
+  ],
+  "source_fingerprint": "fcc1d37199e7b0a7618b07725febcc3b1c52ea1952b9abd6f517883a4e89d3d2",
+  "implementation_attestation_ref": "docs/quality/evidence/change-001/c001-s1/implementation/req-arch-010.json",
+  "implementation_attestation_hash": "516d7dc602c2dcca0622c2dc715dc150f89a07acf380cd0f08a11e143207b227",
+  "semantic_review": "Direct assertions prove Next.js 15+, React/React DOM 19+, TypeScript strict mode, Tailwind/PostCSS wiring, Next runtime scripts, and rendered Tailwind usage; the incompatible Next.js 14 fixture is rejected."
+}

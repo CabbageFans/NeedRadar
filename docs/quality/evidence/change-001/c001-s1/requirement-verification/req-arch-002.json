@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-ARCH-002",
+  "acceptance_ids": [],
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "verification_stage": "REQUIREMENT_VERIFICATION",
+  "result": "PASS",
+  "verified_at": "2026-09-29T01:47:48.542187Z",
+  "git_head": "691b4336c0a3d9596a8c101ce987c13d6108f996",
+  "implementation_refs": [
+    "pyproject.toml",
+    "compose.yaml",
+    "apps/api/src/needradar/db/engine.py"
+  ],
+  "test_refs": [
+    "apps/api/tests/integration/test_readiness.py",
+    "apps/api/tests/integration/test_migrations.py",
+    "apps/api/tests/verification/test_s1_targets.py"
+  ],
+  "verification_targets": [
+    "VT-RV-S1-ARCH-002"
+  ],
+  "test_bindings": [
+    {
+      "target_id": "VT-RV-S1-ARCH-002",
+      "test_nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_002_backend_baseline_declarations",
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": []
+    },
+    {
+      "target_id": "VT-RV-S1-ARCH-002",
+      "test_nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": []
+    },
+    {
+      "target_id": "VT-RV-S1-ARCH-002",
+      "test_nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": []
+    }
+  ],
+  "execution_receipts": [
+    {
+      "target_id": "VT-RV-S1-ARCH-002",
+      "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-002.json",
+      "receipt_hash": "1ffacac59d12a73110fbea0b606245dd4ee279e4475a1f773b1d973702b3d616"
+    }
+  ],
+  "artifacts": [
+    "docs/quality/evidence/change-001/c001-s1/final-requirement-reverification-20260929.md",
+    "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-002.json"
+  ],
+  "source_fingerprint": "77311d90d6cb250ac40cc91a58aaf1d2d26e05df62b10ecbfda02fe5ae34c6ff",
+  "implementation_attestation_ref": "docs/quality/evidence/change-001/c001-s1/implementation/req-arch-002.json",
+  "implementation_attestation_hash": "f9ea3fac3176b8733c88f55609480cb819933e27c9d0a4549ac9a657d9a1ce2d"
+}

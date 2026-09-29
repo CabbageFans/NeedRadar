@@ -166,7 +166,7 @@ Completion reports must separately show: (1) all Requirements, (2) mandatory `AT
 | REQ-EVAL-003 | AC-EVAL-003 | UNASSIGNED | CHANGE-010 | — | Planned INTEGRATION | — | UNIMPLEMENTED |
 | REQ-EVAL-004 | AC-EVAL-004 | UNASSIGNED | CHANGE-010 | — | Planned E2E | — | UNIMPLEMENTED |
 | REQ-ARCH-001 | AC-ARCH-001 | application-foundation | CHANGE-001..006 | `apps/web/src`; `apps/api/src`; `scripts/quality/check_s1_scope.py` | `pnpm check:scope`; Web build/import audit (Foundation scope) | `docs/quality/evidence/change-001/c001-s1/verification.md` (Foundation scope) | UNIMPLEMENTED |
-| REQ-ARCH-002 | — (SHOULD) | application-foundation | CHANGE-001 | `pyproject.toml`; `compose.yaml`; `apps/api/src/needradar/db/engine.py` | `apps/api/tests/integration/test_readiness.py`; `apps/api/tests/integration/test_migrations.py`; `apps/api/tests/verification/test_s1_targets.py` | `docs/quality/evidence/change-001/c001-s1/implementation/req-arch-002.json` | IMPLEMENTED_UNVERIFIED |
+| REQ-ARCH-002 | — (SHOULD) | application-foundation | CHANGE-001 | `pyproject.toml`; `compose.yaml`; `apps/api/src/needradar/db/engine.py` | `apps/api/tests/integration/test_readiness.py`; `apps/api/tests/integration/test_migrations.py`; `apps/api/tests/verification/test_s1_targets.py` | `docs/quality/evidence/change-001/c001-s1/requirement-verification/req-arch-002.json` | PASS |
 | REQ-ARCH-003 | AC-ARCH-003 | application-foundation | CHANGE-001/003..005 | `apps/api/src/needradar/workers/registry.py` | `apps/api/tests/unit/test_workers.py` (logical seams only) | `docs/quality/evidence/change-001/c001-s1/verification.md` (partial) | UNIMPLEMENTED |
 | REQ-ARCH-004 | AC-ARCH-004 | UNASSIGNED | CHANGE-002/004/005/007/008/009 | — | Planned CONTRACT | — | UNIMPLEMENTED |
 | REQ-ARCH-005 | AC-ARCH-005 | UNASSIGNED | CHANGE-005 | — | Planned CONTRACT | — | UNIMPLEMENTED |
@@ -206,10 +206,10 @@ Completion reports must separately show: (1) all Requirements, (2) mandatory `AT
 | REQ-DATA-009 | AC-DATA-009 | UNASSIGNED | CHANGE-006 | — | Planned INTEGRATION | — | UNIMPLEMENTED |
 | REQ-DATA-010 | AC-DATA-010 | UNASSIGNED | CHANGE-008 | — | Planned INTEGRATION | — | UNIMPLEMENTED |
 | REQ-DATA-011 | AC-DATA-011 | UNASSIGNED | CHANGE-002/004 | — | Planned INTEGRATION | — | UNIMPLEMENTED |
-| REQ-ARCH-010 | — (SHOULD) | application-foundation | CHANGE-001 | `apps/web/package.json`; `apps/web/tsconfig.json`; `apps/web/tailwind.config.ts`; `apps/web/postcss.config.mjs`; `apps/web/app/globals.css`; `apps/web/app/layout.tsx`; `apps/web/app/dashboard/page.tsx`; `apps/web/src/components/foundation-status.tsx` | `apps/api/tests/verification/test_s1_targets.py` | `docs/quality/evidence/change-001/c001-s1/implementation/req-arch-010.json` | IMPLEMENTED_UNVERIFIED |
+| REQ-ARCH-010 | — (SHOULD) | application-foundation | CHANGE-001 | `apps/web/package.json`; `apps/web/tsconfig.json`; `apps/web/tailwind.config.ts`; `apps/web/postcss.config.mjs`; `apps/web/app/globals.css`; `apps/web/app/layout.tsx`; `apps/web/app/dashboard/page.tsx`; `apps/web/src/components/foundation-status.tsx` | `apps/api/tests/verification/test_s1_targets.py` | `docs/quality/evidence/change-001/c001-s1/requirement-verification/req-arch-010.json` | PASS |
 | REQ-ARCH-011 | AC-ARCH-011 | application-foundation | CHANGE-001..009 | `apps/web/app/dashboard/page.tsx`; `apps/web/src/lib/api/foundation.ts` | `pnpm check:scope`; Playwright Foundation path | `docs/quality/evidence/change-001/c001-s1/verification.md` (partial) | UNIMPLEMENTED |
 | REQ-ARCH-012 | AC-ARCH-012 | application-foundation | CHANGE-001..009 | `apps/api/src/needradar` | Backend static/unit/integration suite (Foundation ownership only) | `docs/quality/evidence/change-001/c001-s1/verification.md` (partial) | UNIMPLEMENTED |
-| REQ-ARCH-013 | — (MAY) | application-foundation | CHANGE-001/003..005 | `apps/api/src/needradar/workers/registry.py` | `apps/api/tests/unit/test_workers.py` | `docs/quality/evidence/change-001/c001-s1/implementation/req-arch-013.json` | IMPLEMENTED_UNVERIFIED |
+| REQ-ARCH-013 | — (MAY) | application-foundation | CHANGE-001/003..005 | `apps/api/src/needradar/workers/registry.py` | `apps/api/tests/unit/test_workers.py` | `docs/quality/evidence/change-001/c001-s1/requirement-verification/req-arch-013.json` | PASS |
 | REQ-RESILIENCE-008 | — (MAY) | application-foundation | CHANGE-001..004 | — | — | — | UNIMPLEMENTED |
 | REQ-FUTURE-001 | AC-FUTURE-001 | UNASSIGNED | CHANGE-007 | — | Planned STATIC | — | UNIMPLEMENTED |
 | REQ-FUTURE-002 | AC-FUTURE-002 | UNASSIGNED | CHANGE-004/006 | — | Planned STATIC | — | UNIMPLEMENTED |
@@ -224,12 +224,12 @@ Completion reports must separately show: (1) all Requirements, (2) mandatory `AT
 | REQ-GOVERNANCE-008 | AC-GOVERNANCE-008 | UNASSIGNED | CHANGE-006 | — | Planned STATIC | — | UNIMPLEMENTED |
 | REQ-GOVERNANCE-009 | AC-GOVERNANCE-009 | UNASSIGNED | CHANGE-003 | — | Planned E2E | — | UNIMPLEMENTED |
 | REQ-GOVERNANCE-010 | AC-GOVERNANCE-010 | application-foundation | ALL | — | Planned STATIC | — | UNIMPLEMENTED |
-| REQ-GOVERNANCE-011 | AC-GOVERNANCE-011 | application-foundation | ALL | `apps/api/migrations/versions/20260928_0001_foundation_baseline.py`; `apps/api/alembic.ini` | `apps/api/tests/integration/test_migrations.py` | `docs/quality/evidence/change-001/c001-s1/implementation/req-governance-011.json` | IMPLEMENTED_UNVERIFIED |
+| REQ-GOVERNANCE-011 | AC-GOVERNANCE-011 | application-foundation | ALL | `apps/api/migrations/versions/20260928_0001_foundation_baseline.py`; `apps/api/alembic.ini` | `apps/api/tests/integration/test_migrations.py` | `docs/quality/evidence/change-001/c001-s1/requirement-verification/req-governance-011.json` | PASS |
 | REQ-GOVERNANCE-012 | AC-GOVERNANCE-012 | UNASSIGNED | CHANGE-002/004/005/007..009 | — | Planned STATIC | — | UNIMPLEMENTED |
 | REQ-GOVERNANCE-013 | AC-GOVERNANCE-013 | UNASSIGNED | CHANGE-006 | — | Planned UNIT | — | UNIMPLEMENTED |
 | REQ-GOVERNANCE-014 | AC-GOVERNANCE-014 | project-state | CHANGE-001 | — | Planned UNIT | — | UNIMPLEMENTED |
 | REQ-GOVERNANCE-015 | AC-GOVERNANCE-015 | UNASSIGNED | ALL | — | Planned STATIC | — | UNIMPLEMENTED |
-| REQ-FOUNDATION-001 | AC-FOUNDATION-001 | application-foundation | CHANGE-001 | `package.json`; `compose.yaml`; `apps/api/src/needradar/api/app.py`; `apps/web/app/dashboard/page.tsx` | `apps/api/tests/integration/test_readiness.py`; `tests/e2e/foundation.spec.ts`; `apps/api/tests/verification/test_s1_targets.py` | `docs/quality/evidence/change-001/c001-s1/implementation/req-foundation-001.json` | IMPLEMENTED_UNVERIFIED |
+| REQ-FOUNDATION-001 | AC-FOUNDATION-001 | application-foundation | CHANGE-001 | `package.json`; `compose.yaml`; `apps/api/src/needradar/api/app.py`; `apps/web/app/dashboard/page.tsx` | `apps/api/tests/integration/test_readiness.py`; `tests/e2e/foundation.spec.ts`; `apps/api/tests/verification/test_s1_targets.py` | `docs/quality/evidence/change-001/c001-s1/requirement-verification/req-foundation-001.json` | PASS |
 
 ## CHANGE-001 planning chains
 

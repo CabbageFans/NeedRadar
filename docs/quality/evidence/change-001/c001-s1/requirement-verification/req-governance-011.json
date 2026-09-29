@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-GOVERNANCE-011",
+  "acceptance_ids": [
+    "AC-GOVERNANCE-011"
+  ],
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "verification_stage": "REQUIREMENT_VERIFICATION",
+  "result": "PASS",
+  "verified_at": "2026-09-29T01:47:50.569488Z",
+  "git_head": "691b4336c0a3d9596a8c101ce987c13d6108f996",
+  "implementation_refs": [
+    "apps/api/migrations/versions/20260928_0001_foundation_baseline.py",
+    "apps/api/alembic.ini"
+  ],
+  "test_refs": [
+    "apps/api/tests/integration/test_migrations.py"
+  ],
+  "verification_targets": [
+    "VT-RV-S1-GOVERNANCE-011"
+  ],
+  "test_bindings": [
+    {
+      "target_id": "VT-RV-S1-GOVERNANCE-011",
+      "test_nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+      "requirement_id": "REQ-GOVERNANCE-011",
+      "acceptance_ids": [
+        "AC-GOVERNANCE-011"
+      ]
+    }
+  ],
+  "execution_receipts": [
+    {
+      "target_id": "VT-RV-S1-GOVERNANCE-011",
+      "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-governance-011.json",
+      "receipt_hash": "9df7bd97f14dda3fc556418449e16932886d85701615fb71eca2132582f20634"
+    }
+  ],
+  "artifacts": [
+    "docs/quality/evidence/change-001/c001-s1/final-requirement-reverification-20260929.md",
+    "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-governance-011.json"
+  ],
+  "source_fingerprint": "3744bc0526ac47050dba7988ba8e7599fda6647826ab53c8649f1ebfd699c5c0",
+  "implementation_attestation_ref": "docs/quality/evidence/change-001/c001-s1/implementation/req-governance-011.json",
+  "implementation_attestation_hash": "ac3a44ace1cbec2c9ba234e6f4b6580d28eb127cb0a42d88e843e6176289e452"
+}

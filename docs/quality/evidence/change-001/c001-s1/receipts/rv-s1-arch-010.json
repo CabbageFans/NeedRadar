@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "receipt_id": "853b55e5d9a8b16c0417a1c74686c5c782f2304634a7eb75d097f4b0128ef4dc",
+  "target_id": "VT-RV-S1-ARCH-010",
+  "requirement_id": "REQ-ARCH-010",
+  "acceptance_ids": [],
+  "verification_stage": "REQUIREMENT_VERIFICATION",
+  "verification_level": "STATIC",
+  "verification_base_head": "691b4336c0a3d9596a8c101ce987c13d6108f996",
+  "target_registry_hash": "fd5e2de4683fe520c2d31aa20ab6ef1e822ea3782e4b558282895632fe865d9e",
+  "target_definition_hash": "6c355538836eea5a661c42345cd0c2cbbe3018202fe1094964c65cad5779cc38",
+  "source_fingerprint": "fcc1d37199e7b0a7618b07725febcc3b1c52ea1952b9abd6f517883a4e89d3d2",
+  "collection_argv": [
+    "uv",
+    "run",
+    "pytest",
+    "--collect-only",
+    "-q",
+    "-p",
+    "scripts.quality.pytest_binding_plugin",
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture"
+  ],
+  "collection_exit_code": 0,
+  "collected_nodes": [
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture"
+  ],
+  "collected_bindings": [
+    {
+      "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+      "requirement_id": "REQ-ARCH-010",
+      "acceptance_ids": []
+    },
+    {
+      "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture",
+      "requirement_id": "REQ-ARCH-010",
+      "acceptance_ids": []
+    }
+  ],
+  "exact_executable_argv": [
+    "uv",
+    "run",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-p",
+    "scripts.quality.pytest_binding_plugin",
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture"
+  ],
+  "started_at": "2026-09-29T01:47:48.866987Z",
+  "finished_at": "2026-09-29T01:47:49.176345Z",
+  "executed_at": "2026-09-29T01:47:49.176345Z",
+  "actual_exit_code": 0,
+  "test_results": {
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline": "passed",
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture": "passed"
+  },
+  "stdout_sha256": "fcd476841e8af121ff907e81a92a59579b64c007b70cb79f9d096806f703fc7e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "working_directory": "."
+}

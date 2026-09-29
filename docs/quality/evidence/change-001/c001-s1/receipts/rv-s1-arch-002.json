@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "receipt_id": "76c8fa4700b7459241340d62a7ae3ccb6f0055438d133ef1c21ce3bd61e31aa0",
+  "target_id": "VT-RV-S1-ARCH-002",
+  "requirement_id": "REQ-ARCH-002",
+  "acceptance_ids": [],
+  "verification_stage": "REQUIREMENT_VERIFICATION",
+  "verification_level": "INTEGRATION",
+  "verification_base_head": "691b4336c0a3d9596a8c101ce987c13d6108f996",
+  "target_registry_hash": "fd5e2de4683fe520c2d31aa20ab6ef1e822ea3782e4b558282895632fe865d9e",
+  "target_definition_hash": "d13557daa5094fee275529deef62300ef56aacb73640d982814a4ce63a161547",
+  "source_fingerprint": "77311d90d6cb250ac40cc91a58aaf1d2d26e05df62b10ecbfda02fe5ae34c6ff",
+  "collection_argv": [
+    "uv",
+    "run",
+    "pytest",
+    "--collect-only",
+    "-q",
+    "-p",
+    "scripts.quality.pytest_binding_plugin",
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_002_backend_baseline_declarations",
+    "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+    "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+  ],
+  "collection_exit_code": 0,
+  "collected_nodes": [
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_002_backend_baseline_declarations",
+    "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+    "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+  ],
+  "collected_bindings": [
+    {
+      "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_002_backend_baseline_declarations",
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": []
+    },
+    {
+      "nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+      "requirement_id": "REQ-FOUNDATION-001",
+      "acceptance_ids": [
+        "AC-FOUNDATION-001"
+      ]
+    },
+    {
+      "nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": []
+    },
+    {
+      "nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+      "requirement_id": "REQ-GOVERNANCE-011",
+      "acceptance_ids": [
+        "AC-GOVERNANCE-011"
+      ]
+    },
+    {
+      "nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": []
+    }
+  ],
+  "exact_executable_argv": [
+    "uv",
+    "run",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-p",
+    "scripts.quality.pytest_binding_plugin",
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_002_backend_baseline_declarations",
+    "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+    "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+  ],
+  "started_at": "2026-09-29T01:47:47.927531Z",
+  "finished_at": "2026-09-29T01:47:48.542187Z",
+  "executed_at": "2026-09-29T01:47:48.542187Z",
+  "actual_exit_code": 0,
+  "test_results": {
+    "apps/api/tests/verification/test_s1_targets.py::test_arch_002_backend_baseline_declarations": "passed",
+    "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head": "passed",
+    "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade": "passed"
+  },
+  "stdout_sha256": "128a0f8d423ab42266e5cbad89612edd039feb8bab78ba3b32468f14722faba8",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "working_directory": "."
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-ARCH-013",
+  "acceptance_ids": [],
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "verification_stage": "REQUIREMENT_VERIFICATION",
+  "result": "PASS",
+  "verified_at": "2026-09-29T01:47:49.805776Z",
+  "git_head": "691b4336c0a3d9596a8c101ce987c13d6108f996",
+  "implementation_refs": [
+    "apps/api/src/needradar/workers/registry.py"
+  ],
+  "test_refs": [
+    "apps/api/tests/unit/test_workers.py"
+  ],
+  "verification_targets": [
+    "VT-RV-S1-ARCH-013"
+  ],
+  "test_bindings": [
+    {
+      "target_id": "VT-RV-S1-ARCH-013",
+      "test_nodeid": "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+      "requirement_id": "REQ-ARCH-013",
+      "acceptance_ids": []
+    },
+    {
+      "target_id": "VT-RV-S1-ARCH-013",
+      "test_nodeid": "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution",
+      "requirement_id": "REQ-ARCH-013",
+      "acceptance_ids": []
+    }
+  ],
+  "execution_receipts": [
+    {
+      "target_id": "VT-RV-S1-ARCH-013",
+      "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-013.json",
+      "receipt_hash": "b9eb90631e479057eec47e5d36ae3a08451b421a3e21f648e1e168e1c5547213"
+    }
+  ],
+  "artifacts": [
+    "docs/quality/evidence/change-001/c001-s1/final-requirement-reverification-20260929.md",
+    "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-013.json"
+  ],
+  "source_fingerprint": "b6915d1ae9afce1244d80290fff127fad0e6c6f56c49e39e4f10dd7fb4a959c9",
+  "implementation_attestation_ref": "docs/quality/evidence/change-001/c001-s1/implementation/req-arch-013.json",
+  "implementation_attestation_hash": "71e7afc78249ba883e13cf2fdbd6ccea2a4f2b7b500fed8b602ee2d1fa333367"
+}
