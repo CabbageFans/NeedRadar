@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-ARCH-013",
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "coverage": "FULL",
+  "implementation_stage": "IMPLEMENTATION",
+  "implementation_refs": ["apps/api/src/needradar/workers/registry.py"],
+  "test_refs": ["apps/api/tests/unit/test_workers.py"],
+  "test_bindings": [
+    {"target_id": "VT-S1-ARCH-013", "test_nodeid": "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1", "requirement_id": "REQ-ARCH-013", "acceptance_ids": []},
+    {"target_id": "VT-S1-ARCH-013", "test_nodeid": "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution", "requirement_id": "REQ-ARCH-013", "acceptance_ids": []}
+  ],
+  "required_acceptance_ids": [],
+  "verification_targets": ["VT-S1-ARCH-013"],
+  "execution_receipts": [{"target_id": "VT-S1-ARCH-013", "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-arch-013.json", "receipt_hash": "fb0f0bc318074ee8f10ba926bad8d22c4edfdb869e24219f7e0f0b2d35782bb4"}],
+  "source_fingerprint": "b6915d1ae9afce1244d80290fff127fad0e6c6f56c49e39e4f10dd7fb4a959c9",
+  "created_at": "2026-09-28T09:16:31Z"
+}

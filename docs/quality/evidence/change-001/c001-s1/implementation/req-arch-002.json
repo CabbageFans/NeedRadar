@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-ARCH-002",
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "coverage": "FULL",
+  "implementation_stage": "IMPLEMENTATION",
+  "implementation_refs": ["pyproject.toml", "compose.yaml", "apps/api/src/needradar/db/engine.py"],
+  "test_refs": ["apps/api/tests/integration/test_readiness.py", "apps/api/tests/integration/test_migrations.py", "apps/api/tests/verification/test_s1_targets.py"],
+  "test_bindings": [
+    {"target_id": "VT-S1-ARCH-002", "test_nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head", "requirement_id": "REQ-ARCH-002", "acceptance_ids": []},
+    {"target_id": "VT-S1-ARCH-002", "test_nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade", "requirement_id": "REQ-ARCH-002", "acceptance_ids": []}
+  ],
+  "required_acceptance_ids": [],
+  "verification_targets": ["VT-S1-ARCH-002"],
+  "execution_receipts": [{"target_id": "VT-S1-ARCH-002", "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-arch-002.json", "receipt_hash": "c7c3b8c8f315bb6612c2a72154d5399ea9bf2fb846dbbc261f634ad8fc50713d"}],
+  "source_fingerprint": "77311d90d6cb250ac40cc91a58aaf1d2d26e05df62b10ecbfda02fe5ae34c6ff",
+  "created_at": "2026-09-28T09:16:31Z"
+}

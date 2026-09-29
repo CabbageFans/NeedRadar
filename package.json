@@ -1,0 +1,40 @@
+{
+  "name": "needradar",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": "24.x",
+    "pnpm": "10.33.2"
+  },
+  "scripts": {
+    "dev": "concurrently --kill-others --names api,web --prefix-colors blue,magenta \"pnpm dev:api\" \"pnpm dev:web\"",
+    "dev:api": "PYTHONPATH=apps/api/src uv run python -m needradar.server",
+    "dev:web": "pnpm --filter @needradar/web dev",
+    "db:up": "docker compose up -d --wait postgres",
+    "db:down": "docker compose stop",
+    "db:migrate": "uv run alembic -c apps/api/alembic.ini upgrade head",
+    "db:test:up": "docker compose up -d --wait postgres-test && PYTHONPATH=apps/api/src uv run python -m needradar.testing.database_safety bootstrap",
+    "db:test:verify": "PYTHONPATH=apps/api/src uv run python -m needradar.testing.database_safety verify",
+    "db:test:migrate": "PYTHONPATH=apps/api/src uv run python -m needradar.testing.database_safety prepare",
+    "setup:e2e": "playwright install chromium",
+    "check": "pnpm check:web && pnpm check:api && pnpm check:openapi && pnpm check:scope && pnpm check:quality-docs",
+    "check:web": "pnpm --filter @needradar/web check",
+    "check:api": "uv run ruff format --check apps/api/src apps/api/tests scripts/quality && uv run ruff check apps/api/src apps/api/tests scripts/quality && uv run mypy apps/api/src",
+    "check:openapi": "uv run python scripts/quality/check_openapi.py",
+    "check:scope": "uv run python scripts/quality/check_s1_scope.py",
+    "check:quality-docs": "uv run python scripts/quality/check_quality_docs.py",
+    "generate:openapi": "uv run python scripts/quality/export_openapi.py apps/api/openapi.json && pnpm exec openapi-typescript apps/api/openapi.json -o apps/web/src/lib/api/generated/schema.ts",
+    "test:web": "pnpm --filter @needradar/web test",
+    "test:unit": "uv run pytest -m unit apps/api/tests/unit && pnpm test:web",
+    "test:integration": "pnpm db:test:up && uv run pytest -m integration apps/api/tests/integration",
+    "test:migration": "pnpm db:test:up && uv run pytest -m migration apps/api/tests/integration/test_migrations.py",
+    "test:e2e": "pnpm db:test:up && pnpm db:test:migrate && pnpm exec playwright test",
+    "build": "pnpm --filter @needradar/web build"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "concurrently": "9.2.1",
+    "openapi-typescript": "7.13.0"
+  }
+}

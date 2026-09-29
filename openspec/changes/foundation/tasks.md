@@ -4,7 +4,7 @@
 
 ### Executable Product Boundary & Health
 
-- [ ] 1.1 Establish the reproducible root workspace and dependency/runtime contract.
+- [x] 1.1 Establish the reproducible root workspace and dependency/runtime contract.
   - **Objective:** Create the monorepo directories; pin Node.js 24.x LTS through `.nvmrc`, `.node-version`, and engines, an exact pnpm `packageManager` and sole `pnpm-lock.yaml`; pin Python 3.11.x with uv, `pyproject.toml`, `uv.lock`, and `.python-version`; declare PostgreSQL 18.x and Psycopg 3 async; add `.env.example`, root scripts, ignore rules, and startup/test command documentation.
   - **Files / area:** Root manifests and README; `apps/web`; `apps/api`; `tests/e2e`; no domain implementation.
   - **Requirements:** REQ-FOUNDATION-001; REQ-ARCH-002/010 at `SHOULD`; REQ-PROJECT-002 partial.
@@ -13,7 +13,7 @@
   - **Verification:** From a clean checkout, validate runtime declarations and sole lock/driver authorities; run locked install/config commands; verify pytest + pytest-asyncio `strict`, PostgreSQL 18, and no undeclared global package/config.
   - **Done condition:** A reviewer can reproduce exact Node/pnpm/Python/uv/PostgreSQL/driver/test prerequisites from repository files and finds no competing package manager, lockfile, driver, or implicit machine state.
 
-- [ ] 1.2 Build the FastAPI process boundary, PostgreSQL lifecycle, health/readiness, and structured Problem Details foundation.
+- [x] 1.2 Build the FastAPI process boundary, PostgreSQL lifecycle, health/readiness, and structured Problem Details foundation.
   - **Objective:** Add configuration, app factory/lifespan, Psycopg 3 async SQLAlchemy engine/session ownership, `GET /health`, read-only `GET /ready` connectivity + exact Alembic-head checks, request IDs, structured errors, and safe shutdown.
   - **Files / area:** `apps/api/src/needradar/{api,core,db}` and S1 API unit/integration tests.
   - **Requirements:** REQ-FOUNDATION-001; REQ-ARCH-012 partial; structured-error user contract.
@@ -22,7 +22,7 @@
   - **Verification:** Run unit/static checks and real PostgreSQL 18 READY-001..005 integration cases: DB+head ready; DB unavailable not-ready; schema behind not-ready; missing/divergent/unknown revision not-ready; `/health` still 200 while DB is unavailable; verify engine disposal.
   - **Done condition:** Liveness is process-only and readiness is read-only DB+schema-head truth under every defined failure mode.
 
-- [ ] 1.3 Establish Alembic mechanics without a Research business table.
+- [x] 1.3 Establish Alembic mechanics without a Research business table.
   - **Objective:** Configure async-aware Alembic and create an empty Foundation baseline revision that proves migration authority before Project schema work.
   - **Files / area:** `apps/api/alembic.ini`, `apps/api/migrations`, migration test helpers.
   - **Requirements:** REQ-GOVERNANCE-011; REQ-FOUNDATION-001.
@@ -31,7 +31,7 @@
   - **Verification:** On an isolated PostgreSQL 18 database run clean DB → `alembic upgrade head`, assert exact revision, then the defined baseline downgrade → upgrade and inspect the catalog; verify only Alembic metadata exists and readiness reports non-head states as 503.
   - **Done condition:** Migration commands are repeatable, tested, and ready for S2 schema without any business-table leakage.
 
-- [ ] 1.4 Establish the Web shell, API access boundary, static quality commands, logical worker registry, and structured logging schema.
+- [x] 1.4 Establish the Web shell, API access boundary, static quality commands, logical worker registry, and structured logging schema.
   - **Objective:** Add the minimal real Dashboard shell/API reachability, typed API-layer location, localhost/CORS/secret boundary, JSON logging fields, and identifiable `crawler_worker`/`analysis_worker`/`clustering_worker` roles.
   - **Files / area:** `apps/web`, `apps/api/src/needradar/{core,workers}`, root scripts, S1 tests/docs.
   - **Requirements:** REQ-ARCH-001; REQ-ARCH-003 partial; REQ-ARCH-011/012 partial; REQ-ARCH-013 `MAY`; REQ-RESILIENCE-007 partial; REQ-RESILIENCE-008 `MAY`.
@@ -40,14 +40,14 @@
   - **Verification:** Run Web lint/format/typecheck, dependency/import/bundle audit for AC-ARCH-001, secret/static configuration scan, bind/CORS tests, backend log-shape and worker-registry tests, OpenAPI diff, and a browser smoke test that real localhost Web reaches real API.
   - **Done condition:** AC-ARCH-001 has Foundation-scope STATIC evidence that crawler process core, LLM judgment, clustering, scoring, backend runtime packages, and secrets do not enter the client; global Requirement remains `UNIMPLEMENTED` for future Changes.
 
-- [ ] 1.5 Execute and retain the C001-S1 Exit Gate.
+- [x] 1.5 Execute and retain the C001-S1 Exit Gate.
   - **Objective:** Prove a clean environment starts pinned/local-only Web + API + PostgreSQL 18 and distinguishes liveness from DB+schema readiness.
   - **Files / area:** S1 evidence directory and startup runbook only.
   - **Requirements:** REQ-FOUNDATION-001.
   - **Acceptance:** AC-FOUNDATION-001.
-  - **Implementation constraints:** Real PostgreSQL is mandatory; evidence records commands, versions, timestamps, exit codes, and logs; no later capability is claimed.
-  - **Verification:** Repeat locked install/start/explicit migrate/READY-001..005/browser smoke and architecture/secret audit from documented commands; run `openspec validate foundation --strict` plus quality-doc validation.
-  - **Done condition:** Retained S1 evidence proves the fixed runtime/local/secret/readiness contract and catalog confirms no Research/future business table exists; no Project restart-persistence claim is made in S1.
+  - **Implementation constraints:** Real PostgreSQL is mandatory; manifests reference only repository-controlled verification target IDs. The trusted runner records real argv, timestamps, process exit codes, output hashes, structured test bindings, and source/target fingerprints; manifest command/exit/log/reviewer claims are non-authoritative. No later capability is claimed.
+  - **Verification:** Repeat locked install/start/explicit migrate/READY-001..005/browser smoke and architecture/secret audit through canonical targets; run `openspec validate foundation --strict` plus quality-doc validation and the R5 adversarial suite.
+  - **Done condition:** Retained, runner-generated S1 receipts prove the fixed runtime/local/secret/readiness contract; every existing IU is freshly revalidated with no persisted-state exception; catalog confirms no Research/future business table exists; no Project restart-persistence claim is made in S1.
 
 ## C001-S2
 

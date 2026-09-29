@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "canonical_sources": [
+    "docs/quality/REQUIREMENTS_INDEX.md",
+    "docs/quality/ACCEPTANCE.md",
+    "docs/quality/PLAN.md",
+    "docs/quality/TRACEABILITY.md",
+    "openspec/changes/foundation/proposal.md",
+    "openspec/changes/foundation/design.md",
+    "openspec/changes/foundation/tasks.md",
+    "openspec/changes/foundation/specs/application-foundation/spec.md",
+    "openspec/changes/foundation/specs/dashboard/spec.md",
+    "openspec/changes/foundation/specs/project-events/spec.md",
+    "openspec/changes/foundation/specs/project-state/spec.md",
+    "openspec/changes/foundation/specs/research-project/spec.md"
+  ],
+  "changes": {
+    "CHANGE-001": {
+      "slices": {
+        "C001-S1": {
+          "requirements": {
+            "REQ-ARCH-001": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-ARCH-001"]
+            },
+            "REQ-ARCH-002": {
+              "coverage": "FULL",
+              "acceptance_ids": []
+            },
+            "REQ-ARCH-003": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-ARCH-003"]
+            },
+            "REQ-ARCH-010": {
+              "coverage": "FULL",
+              "acceptance_ids": []
+            },
+            "REQ-ARCH-011": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-ARCH-011"]
+            },
+            "REQ-ARCH-012": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-ARCH-012"]
+            },
+            "REQ-ARCH-013": {
+              "coverage": "FULL",
+              "acceptance_ids": []
+            },
+            "REQ-DATA-001": {
+              "coverage": "DEFERRED",
+              "acceptance_ids": ["AC-DATA-001"]
+            },
+            "REQ-FOUNDATION-001": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-FOUNDATION-001"]
+            },
+            "REQ-GOVERNANCE-005": {
+              "coverage": "SCOPE_GUARD",
+              "acceptance_ids": ["AC-GOVERNANCE-005"]
+            },
+            "REQ-GOVERNANCE-011": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-GOVERNANCE-011"]
+            },
+            "REQ-PROJECT-002": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-PROJECT-002"]
+            },
+            "REQ-RESILIENCE-007": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-RESILIENCE-007"]
+            }
+          }
+        },
+        "C001-S2": {
+          "requirements": {
+            "REQ-DATA-001": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-DATA-001"]
+            },
+            "REQ-PROJECT-008": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-PROJECT-008"]
+            },
+            "REQ-PROJECT-013": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-PROJECT-013"]
+            },
+            "REQ-PROJECT-018": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-PROJECT-018"]
+            }
+          }
+        },
+        "C001-S3": {
+          "requirements": {
+            "REQ-GOVERNANCE-014": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-GOVERNANCE-014"]
+            },
+            "REQ-PROJECT-010": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-PROJECT-010"]
+            },
+            "REQ-PROJECT-016": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-PROJECT-016"]
+            },
+            "REQ-PROJECT-017": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-PROJECT-017"]
+            }
+          }
+        },
+        "C001-S4": {
+          "requirements": {
+            "REQ-ARCH-011": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-ARCH-011"]
+            },
+            "REQ-ARCH-012": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-ARCH-012"]
+            },
+            "REQ-PROJECT-011": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-PROJECT-011"]
+            },
+            "REQ-PROJECT-014": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-PROJECT-014"]
+            },
+            "REQ-PROJECT-018": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-PROJECT-018"]
+            },
+            "REQ-UI-002": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-UI-002"]
+            }
+          }
+        },
+        "C001-S5": {
+          "requirements": {
+            "REQ-API-007": {
+              "coverage": "PARTIAL",
+              "acceptance_ids": ["AC-API-007"]
+            },
+            "REQ-SSE-001": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-SSE-001"]
+            },
+            "REQ-SSE-002": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-SSE-002"]
+            },
+            "REQ-SSE-003": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-SSE-003"]
+            },
+            "REQ-SSE-004": {
+              "coverage": "FULL",
+              "acceptance_ids": ["AC-SSE-004"]
+            }
+          }
+        },
+        "C001-S6": {
+          "requirements": {}
+        }
+      }
+    }
+  }
+}

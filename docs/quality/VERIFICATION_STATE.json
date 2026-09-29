@@ -1,0 +1,8 @@
+{
+  "schema_version": 2,
+  "active_change": "CHANGE-001",
+  "active_slice": "C001-S1",
+  "result_update_authority": "C001-S1",
+  "stage": "CODE_REVIEW_READY",
+  "independent_requirement_verification_evidence": null
+}

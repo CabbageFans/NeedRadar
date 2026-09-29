@@ -1,0 +1,54 @@
+[project]
+name = "needradar-foundation"
+version = "0.1.0"
+description = "NeedRadar CHANGE-001 Foundation API"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "alembic>=1.16.5,<2",
+  "fastapi>=0.116.1,<1",
+  "psycopg[binary]>=3.2.10,<4",
+  "pydantic-settings>=2.10.1,<3",
+  "sqlalchemy[asyncio]>=2.0.43,<3",
+  "uvicorn[standard]>=0.35.0,<1",
+]
+
+[dependency-groups]
+dev = [
+  "httpx>=0.28.1,<1",
+  "mypy>=1.17.1,<2",
+  "pytest>=8.4.1,<9",
+  "pytest-asyncio>=1.1.0,<2",
+  "ruff>=0.12.10,<1",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+addopts = "-ra --strict-config --strict-markers"
+markers = [
+  "unit: isolated tests with no network or database access",
+  "integration: tests against an isolated real PostgreSQL database",
+  "migration: Alembic upgrade/downgrade verification against PostgreSQL",
+  "quality_binding(requirement_id, *acceptance_ids): structured Requirement/Acceptance binding",
+]
+testpaths = ["apps/api/tests"]
+pythonpath = ["apps/api/src", "."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC", "RUF"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+mypy_path = "apps/api/src"
+plugins = ["pydantic.mypy"]
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true

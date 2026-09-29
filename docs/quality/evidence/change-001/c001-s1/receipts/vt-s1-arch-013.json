@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "receipt_id": "fe006091366a9d6ccb50f3cedfa23cce25829bb54276cfe7b701246eaf70b32b",
+  "target_id": "VT-S1-ARCH-013",
+  "requirement_id": "REQ-ARCH-013",
+  "acceptance_ids": [],
+  "verification_stage": "IMPLEMENTATION",
+  "verification_level": "UNIT",
+  "verification_base_head": "9b48714a90bb29aadf29a78e51be1a479b3ffd5a",
+  "target_registry_hash": "fd5e2de4683fe520c2d31aa20ab6ef1e822ea3782e4b558282895632fe865d9e",
+  "target_definition_hash": "1794cdcb7a9041c3c96e48020b4f7051b9b5ad32259c88f02633169460f32a92",
+  "source_fingerprint": "b6915d1ae9afce1244d80290fff127fad0e6c6f56c49e39e4f10dd7fb4a959c9",
+  "collection_argv": [
+    "uv",
+    "run",
+    "pytest",
+    "--collect-only",
+    "-q",
+    "-p",
+    "scripts.quality.pytest_binding_plugin",
+    "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+    "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution"
+  ],
+  "collection_exit_code": 0,
+  "collected_nodes": [
+    "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+    "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution"
+  ],
+  "collected_bindings": [
+    {
+      "nodeid": "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+      "requirement_id": "REQ-ARCH-013",
+      "acceptance_ids": []
+    },
+    {
+      "nodeid": "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution",
+      "requirement_id": "REQ-ARCH-013",
+      "acceptance_ids": []
+    }
+  ],
+  "exact_executable_argv": [
+    "uv",
+    "run",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-p",
+    "scripts.quality.pytest_binding_plugin",
+    "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+    "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution"
+  ],
+  "started_at": "2026-09-29T01:32:03.928957Z",
+  "finished_at": "2026-09-29T01:32:04.215900Z",
+  "executed_at": "2026-09-29T01:32:04.215900Z",
+  "actual_exit_code": 0,
+  "test_results": {
+    "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1": "passed",
+    "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution": "passed"
+  },
+  "stdout_sha256": "f9991bfc1c7ebd12bb16ce56e1cf3117618ca286795cd280e4f6ac597c67ff48",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "working_directory": "."
+}

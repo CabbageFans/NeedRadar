@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-FOUNDATION-001",
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "coverage": "FULL",
+  "implementation_stage": "IMPLEMENTATION",
+  "implementation_refs": ["package.json", "compose.yaml", "apps/api/src/needradar/api/app.py", "apps/web/app/dashboard/page.tsx"],
+  "test_refs": ["apps/api/tests/integration/test_readiness.py", "tests/e2e/foundation.spec.ts", "apps/api/tests/verification/test_s1_targets.py"],
+  "test_bindings": [
+    {"target_id": "VT-S1-FOUNDATION-001", "test_nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head", "requirement_id": "REQ-FOUNDATION-001", "acceptance_ids": ["AC-FOUNDATION-001"]},
+    {"target_id": "VT-S1-FOUNDATION-001", "test_nodeid": "apps/api/tests/verification/test_s1_targets.py::test_foundation_real_e2e", "requirement_id": "REQ-FOUNDATION-001", "acceptance_ids": ["AC-FOUNDATION-001"]}
+  ],
+  "required_acceptance_ids": ["AC-FOUNDATION-001"],
+  "verification_targets": ["VT-S1-FOUNDATION-001"],
+  "execution_receipts": [{"target_id": "VT-S1-FOUNDATION-001", "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-foundation-001.json", "receipt_hash": "37031bebfc2a915d5bdd120fa43b2f976a011b5fdeaeb036fc95ea6f5cb41d4c"}],
+  "source_fingerprint": "e0bc4c38cf9967af45e760333270b7656bc2c0996d5c6d7879813dd475926fa0",
+  "created_at": "2026-09-28T09:16:31Z"
+}

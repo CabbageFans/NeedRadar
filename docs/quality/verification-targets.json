@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "targets": {
+    "VT-S1-ARCH-002": {
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": [],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "IMPLEMENTATION",
+      "verification_level": "INTEGRATION",
+      "runner": "pytest",
+      "setup": "guarded_postgres",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+        "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+          "requirement_id": "REQ-ARCH-002",
+          "acceptance_ids": []
+        },
+        {
+          "nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+          "requirement_id": "REQ-ARCH-002",
+          "acceptance_ids": []
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-arch-002.json"
+    },
+    "VT-S1-ARCH-010": {
+      "requirement_id": "REQ-ARCH-010",
+      "acceptance_ids": [],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "IMPLEMENTATION",
+      "verification_level": "STATIC",
+      "runner": "pytest",
+      "setup": "none",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+        "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+          "requirement_id": "REQ-ARCH-010",
+          "acceptance_ids": []
+        },
+        {
+          "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture",
+          "requirement_id": "REQ-ARCH-010",
+          "acceptance_ids": []
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-arch-010.json"
+    },
+    "VT-S1-ARCH-013": {
+      "requirement_id": "REQ-ARCH-013",
+      "acceptance_ids": [],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "IMPLEMENTATION",
+      "verification_level": "UNIT",
+      "runner": "pytest",
+      "setup": "none",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+        "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+          "requirement_id": "REQ-ARCH-013",
+          "acceptance_ids": []
+        },
+        {
+          "nodeid": "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution",
+          "requirement_id": "REQ-ARCH-013",
+          "acceptance_ids": []
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-arch-013.json"
+    },
+    "VT-S1-GOVERNANCE-011": {
+      "requirement_id": "REQ-GOVERNANCE-011",
+      "acceptance_ids": ["AC-GOVERNANCE-011"],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "IMPLEMENTATION",
+      "verification_level": "INTEGRATION",
+      "runner": "pytest",
+      "setup": "guarded_postgres",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+          "requirement_id": "REQ-GOVERNANCE-011",
+          "acceptance_ids": ["AC-GOVERNANCE-011"]
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-governance-011.json"
+    },
+    "VT-S1-FOUNDATION-001": {
+      "requirement_id": "REQ-FOUNDATION-001",
+      "acceptance_ids": ["AC-FOUNDATION-001"],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "IMPLEMENTATION",
+      "verification_level": "INTEGRATION",
+      "runner": "pytest",
+      "setup": "guarded_postgres",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+        "apps/api/tests/verification/test_s1_targets.py::test_foundation_real_e2e"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+          "requirement_id": "REQ-FOUNDATION-001",
+          "acceptance_ids": ["AC-FOUNDATION-001"]
+        },
+        {
+          "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_foundation_real_e2e",
+          "requirement_id": "REQ-FOUNDATION-001",
+          "acceptance_ids": ["AC-FOUNDATION-001"]
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-foundation-001.json"
+    },
+    "VT-RV-S1-ARCH-002": {
+      "requirement_id": "REQ-ARCH-002",
+      "acceptance_ids": [],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "REQUIREMENT_VERIFICATION",
+      "verification_level": "INTEGRATION",
+      "runner": "pytest",
+      "setup": "guarded_postgres",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/verification/test_s1_targets.py::test_arch_002_backend_baseline_declarations",
+        "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+        "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_002_backend_baseline_declarations",
+          "requirement_id": "REQ-ARCH-002",
+          "acceptance_ids": []
+        },
+        {
+          "nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+          "requirement_id": "REQ-ARCH-002",
+          "acceptance_ids": []
+        },
+        {
+          "nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+          "requirement_id": "REQ-ARCH-002",
+          "acceptance_ids": []
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-002.json"
+    },
+    "VT-RV-S1-ARCH-010": {
+      "requirement_id": "REQ-ARCH-010",
+      "acceptance_ids": [],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "REQUIREMENT_VERIFICATION",
+      "verification_level": "STATIC",
+      "runner": "pytest",
+      "setup": "none",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+        "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_010_frontend_baseline",
+          "requirement_id": "REQ-ARCH-010",
+          "acceptance_ids": []
+        },
+        {
+          "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_arch_010_rejects_incompatible_frontend_fixture",
+          "requirement_id": "REQ-ARCH-010",
+          "acceptance_ids": []
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-010.json"
+    },
+    "VT-RV-S1-ARCH-013": {
+      "requirement_id": "REQ-ARCH-013",
+      "acceptance_ids": [],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "REQUIREMENT_VERIFICATION",
+      "verification_level": "UNIT",
+      "runner": "pytest",
+      "setup": "none",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+        "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/unit/test_workers.py::test_worker_roles_are_distinct_and_unavailable_in_s1",
+          "requirement_id": "REQ-ARCH-013",
+          "acceptance_ids": []
+        },
+        {
+          "nodeid": "apps/api/tests/unit/test_workers.py::test_worker_boundary_does_not_fake_business_execution",
+          "requirement_id": "REQ-ARCH-013",
+          "acceptance_ids": []
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-arch-013.json"
+    },
+    "VT-RV-S1-GOVERNANCE-011": {
+      "requirement_id": "REQ-GOVERNANCE-011",
+      "acceptance_ids": [
+        "AC-GOVERNANCE-011"
+      ],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "REQUIREMENT_VERIFICATION",
+      "verification_level": "STATIC",
+      "runner": "pytest",
+      "setup": "guarded_postgres",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade",
+          "requirement_id": "REQ-GOVERNANCE-011",
+          "acceptance_ids": [
+            "AC-GOVERNANCE-011"
+          ]
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-governance-011.json"
+    },
+    "VT-RV-S1-FOUNDATION-001": {
+      "requirement_id": "REQ-FOUNDATION-001",
+      "acceptance_ids": [
+        "AC-FOUNDATION-001"
+      ],
+      "change_id": "CHANGE-001",
+      "slice_id": "C001-S1",
+      "verification_stage": "REQUIREMENT_VERIFICATION",
+      "verification_level": "INTEGRATION",
+      "runner": "pytest",
+      "setup": "guarded_postgres",
+      "working_directory": ".",
+      "arguments": [
+        "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+        "apps/api/tests/integration/test_readiness.py::test_health_stays_up_when_database_is_down",
+        "apps/api/tests/verification/test_s1_targets.py::test_foundation_scope_remains_s1_only",
+        "apps/api/tests/verification/test_s1_targets.py::test_foundation_real_e2e"
+      ],
+      "test_nodes": [
+        {
+          "nodeid": "apps/api/tests/integration/test_readiness.py::test_ready_when_database_is_at_head",
+          "requirement_id": "REQ-FOUNDATION-001",
+          "acceptance_ids": [
+            "AC-FOUNDATION-001"
+          ]
+        },
+        {
+          "nodeid": "apps/api/tests/integration/test_readiness.py::test_health_stays_up_when_database_is_down",
+          "requirement_id": "REQ-FOUNDATION-001",
+          "acceptance_ids": [
+            "AC-FOUNDATION-001"
+          ]
+        },
+        {
+          "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_foundation_scope_remains_s1_only",
+          "requirement_id": "REQ-FOUNDATION-001",
+          "acceptance_ids": [
+            "AC-FOUNDATION-001"
+          ]
+        },
+        {
+          "nodeid": "apps/api/tests/verification/test_s1_targets.py::test_foundation_real_e2e",
+          "requirement_id": "REQ-FOUNDATION-001",
+          "acceptance_ids": [
+            "AC-FOUNDATION-001"
+          ]
+        }
+      ],
+      "receipt_path": "docs/quality/evidence/change-001/c001-s1/receipts/rv-s1-foundation-001.json"
+    }
+  }
+}

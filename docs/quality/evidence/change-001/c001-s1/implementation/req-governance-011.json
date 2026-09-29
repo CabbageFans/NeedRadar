@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "requirement_id": "REQ-GOVERNANCE-011",
+  "change_id": "CHANGE-001",
+  "slice_id": "C001-S1",
+  "coverage": "FULL",
+  "implementation_stage": "IMPLEMENTATION",
+  "implementation_refs": ["apps/api/migrations/versions/20260928_0001_foundation_baseline.py", "apps/api/alembic.ini"],
+  "test_refs": ["apps/api/tests/integration/test_migrations.py"],
+  "test_bindings": [
+    {"target_id": "VT-S1-GOVERNANCE-011", "test_nodeid": "apps/api/tests/integration/test_migrations.py::test_empty_baseline_upgrade_downgrade_upgrade", "requirement_id": "REQ-GOVERNANCE-011", "acceptance_ids": ["AC-GOVERNANCE-011"]}
+  ],
+  "required_acceptance_ids": ["AC-GOVERNANCE-011"],
+  "verification_targets": ["VT-S1-GOVERNANCE-011"],
+  "execution_receipts": [{"target_id": "VT-S1-GOVERNANCE-011", "receipt_ref": "docs/quality/evidence/change-001/c001-s1/receipts/vt-s1-governance-011.json", "receipt_hash": "e32671e24c0a65c8ba5ed6a5f517518b6c686955793da0b02098d861a535c594"}],
+  "source_fingerprint": "3744bc0526ac47050dba7988ba8e7599fda6647826ab53c8649f1ebfd699c5c0",
+  "created_at": "2026-09-28T09:16:31Z"
+}
